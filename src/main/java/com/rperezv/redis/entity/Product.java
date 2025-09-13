@@ -1,7 +1,6 @@
 package com.rperezv.redis.entity;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 /**
@@ -15,6 +14,9 @@ import org.springframework.data.annotation.Id;
  */
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Product {
 
     @Id
