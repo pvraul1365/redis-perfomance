@@ -32,9 +32,9 @@ public class ProductController {
     }
 
     @PutMapping("{id}")
-    public Mono<Product> getProductById(@PathVariable Integer id, @RequestBody Mono<Product> product) {
+    public Mono<Product> updateProductById(@PathVariable Integer id, @RequestBody Mono<Product> product) {
         log.info("Updating product (in controller) by id: {}", id);
 
-        return this.service.getProductById(id);
+        return this.service.updateProduct(id, product);
     }
 }
