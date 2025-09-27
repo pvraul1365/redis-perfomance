@@ -1,7 +1,7 @@
 package com.rperezv.redis.controller;
 
 import com.rperezv.redis.entity.Product;
-import com.rperezv.redis.service.ProductService;
+import com.rperezv.redis.service.ProductServiceV1;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +17,12 @@ import reactor.core.publisher.Mono;
  * @since 1.17
  */
 @RestController
-@RequestMapping("product")
+@RequestMapping("product/v1")
 @RequiredArgsConstructor
 @Slf4j
-public class ProductController {
+public class ProductControllerV1 {
 
-    private final ProductService service;
+    private final ProductServiceV1 service;
 
     @GetMapping("{id}")
     public Mono<Product> getProductById(@PathVariable Integer id) {
